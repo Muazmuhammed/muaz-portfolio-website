@@ -1,0 +1,215 @@
+/* GENERAL */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background: #f0f8ff;
+    color: #333;
+}
+
+/* HERO SECTION WITH VISIBLE TEXT */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    background: url('https://images.unsplash.com/photo-1581092795366-4960a6e2a062?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6); /* slightly darker overlay for better contrast */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* adds shadow for readability */
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-shadow: 1.5px 1.5px 5px rgba(0,0,0,0.6); /* adds shadow for readability */
+}
+
+.btn {
+    text-decoration: none;
+    background: #fff;
+    color: #4facfe;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+}
+.btn:hover {
+    background: #00f2fe;
+    color: #fff;
+}
+
+
+
+/* SKILLS */
+.skills-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.skill-card {
+    background: #4facfe;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.skill-card img {
+    width: 48px;
+    margin-bottom: 5px;
+}
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* PROJECTS */
+.projects-section {
+    padding: 4rem 2rem;
+    background: #e6f7ff;
+    text-align: center;
+}
+.projects-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.project-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.project-card a {
+    color: #4facfe;
+    font-weight: bold;
+    text-decoration: none;
+}
+.project-card a:hover {
+    text-decoration: underline;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* CERTIFICATES */
+.certificates-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.certificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.certificates-container img {
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+.certificates-container img:hover {
+    transform: scale(1.05);
+}
+/* CONTACT SECTION - LIGHT VERSION */
+.contact-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #d0f0fd, #f0fbff); /* light blue gradient */
+    color: #333; /* dark text for readability */
+    border-top: 2px solid #b0e0fc; /* subtle top border */
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section p,
+.contact-section a {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+    color: #4facfe; /* subtle accent on hover */
+}
+
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .projects-container, .skills-container, .certificates-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
